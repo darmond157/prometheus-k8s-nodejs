@@ -1,5 +1,6 @@
 require("dotenv").config();
 const fastify = require("fastify")({ logger: true });
+const client = require('prom-client');
 
 const counter = new client.Counter({
 	name: "api_requests_count",
